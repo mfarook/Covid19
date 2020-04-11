@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>COVID-19 Map Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=fetch,requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <link rel="stylesheet" href="/style.78032849.css">
+  <script src="/style.78032849.js"></script><link rel="stylesheet" href="/covid19.e31bb0bc.css"></head>
+  <body>
+    <!--<nav class="navbar is-info" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://bulma.io">
+          <img src="img/icon_64_corona.png" width="52" height="52"> Dashboad - India
+        </a>
+    
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    </nav>-->
+    <main class="container">
+      <div class="tile is-ancestor">
+        <div class="tile is-4 is-vertical is-parent">
+          <div class="tile is-child box">
+            <p class="title">Covid19 India Tracker</p>
+            <nav class="level">
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Confirmed Cases</p>
+                  <p id="confirmCases" class="title">0</p>
+                </div>
+              </div>
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Recovered</p>
+                  <p id="curedCases" class="title">0</p>
+                </div>
+              </div>
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Death</p>
+                  <p id="deathCases" class="title">0</p>
+                </div>
+              </div>
+            </nav>
+            <h5>Ps: All data is from MoHFW</h5>
+          </div>
+          <div class="tile is-child box">
+            <p class="title">Top 5 most affected states</p>
+            <div id="mostCasesBarChart"></div>
+          </div>
+          <!--<div class="tile is-child box">
+            <p class="title">Deaths</p>
+            <div id="pieChart"></div>
+          </div>-->
+        </div>
+        <div class="tile is-parent">
+          <div class="pageloader is-active"><span class="title">Loading Map</span></div>
+          <div class="tile is-child box">
+            <p class="title">INDIA -
+              HOVER OVER A STATE/UT FOR MORE DETAILS</p>
+            <div id="map" class="map"></div>
+          </div>
+        </div>
+      </div>
+      <!--<div class="tile is-ancestor">
+        <div class="tile is-12">
+          <article class="tile is-child box">
+            <p id="tableViewTitle" class="title">Table View</p>
+            <div class="content">
+              <table id="tableView" class="table is-fullwidth is-hoverable is-bordered is-responsive">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                  </tr>
+                </tfoot>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </div>
+      </div>-->
+      <div id="popup" class="popup"></div>
+      
+    </main>
+    <!--<div class="notification is-primary">
+      <button class="delete"></button>
+      <strong><a href="https://data.gov.in/major-indicator/covid-19-india-data-source-mohfw">COVID-19 INDIA (Data Source MoHFW)</a> </strong>All datasets/resources including metadata published on data.gov.in are licensed
+      under the Government Open Data Licence - India
+    </div>-->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="/covid19.e31bb0bc.js"></script>
+  </body>
+</html>
