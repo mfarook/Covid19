@@ -1,0 +1,123 @@
+@charset "utf-8";
+@import "../node_modules/bulma/css/bulma.css";
+@import "../node_modules/bulma-pageloader/dist/css/bulma-pageloader.min.css";
+@import '../node_modules/bulma/sass/utilities/_all.sass';
+
+/* @import "../node_module/bulma-pageloader/dist/css/bulma-pageloader.min.css"; */
+
+.map{
+  
+  width:100%;
+  height: calc(100vh - 80px);
+  /* position: absolute; */
+  /* display: flex; */
+  overflow: hidden;
+}
+/* .map {
+    width: 100%;
+    height:768px;
+  } */
+    .popup {
+        border-radius: 5px;
+        /* border: 1px solid grey;
+        background-color: rgba(255, 255, 255, 0.1); */
+        /* padding: px; */
+    }
+    .axis text, .tick text {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 10px;
+    }
+
+
+    .tooltip{
+      position: absolute;
+      display: none;
+      min-width: 80px;
+      height: auto;
+      background: rgba(255,255,255,0.8);
+      border: 1px solid grey;
+      padding: 5px;
+      text-align: center;
+  }
+  .pageloader{
+    opacity: 0.5;
+  }
+
+
+  @media screen and (max-width: 800px) {
+    .is-responsive {
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 0;
+      display: block;
+      position: relative;
+    }
+    .is-responsive td:empty:before {
+      content: " ";
+    }
+    .is-responsive th,
+    .is-responsive td {
+      margin: 0;
+      vertical-align: top;
+    }
+    .is-responsive th {
+      text-align: left;
+    }
+    .is-responsive thead {
+      border-right: solid 2px #dbdbdb;
+      display: block;
+      float: left;
+    }
+    .is-responsive thead tr {
+      display: block;
+      padding: 0 10px 0 0;
+    }
+    .is-responsive thead tr th::before {
+      content: " ";
+    }
+    .is-responsive thead td,
+    .is-responsive thead th {
+      border-width: 0 0 1px;
+    }
+    .is-responsive tbody {
+      display: block;
+      width: auto;
+      position: relative;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .is-responsive tbody tr {
+      display: inline-block;
+      vertical-align: top;
+    }
+    .is-responsive th {
+      display: block;
+      text-align: right;
+    }
+    .is-responsive td {
+      display: block;
+      min-height: 1.25em;
+      text-align: left;
+    }
+    .is-responsive th:last-child,
+    .is-responsive td:last-child {
+      border-bottom-width: 0;
+    }
+    .is-responsive tr:last-child td:not(:last-child) {
+      border: 1px solid #dbdbdb;
+      border-width: 0 0 1px;
+    }
+    .is-responsive.is-bordered td,
+    .is-responsive.is-bordered th {
+      border-width: 1px;
+    }
+    .is-responsive.is-bordered tr td:last-child,
+    .is-responsive.is-bordered tr th:last-child {
+      border-bottom-width: 1px;
+    }
+    .is-responsive.is-bordered tr:last-child td,
+    .is-responsive.is-bordered tr:last-child th {
+      border-width: 1px;
+    }
+  }
+  
